@@ -11,3 +11,12 @@
  * Text Domain:       my-basics-plugin
  * Domain Path:       /languages
  */
+
+
+add_filter('wp_mail','redirect_mails', 10,1);
+function redirect_mails($args){
+    if ($args["subject"] == "Seu pedido em Unifop foi concluído") {
+        $args["message"] = str_replace('{link_consulta}','https://link',$args["message"]);
+    }
+    return $args;
+}
