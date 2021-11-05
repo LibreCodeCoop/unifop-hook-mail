@@ -1,0 +1,19 @@
+{
+    "name": "root/unifop-hook-mail",
+    "type": "wordpress-plugin",
+    "autoload": {
+        "psr-4": {
+            "Root\\UnifopHookMail\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "LibreCode",
+            "email": "contato@librecode.coop"
+        }
+    ],
+    "require": {
+        "composer/installers": "~1.0",
+        "lcobucci/jwt": "^4.1"
+    }
+}
